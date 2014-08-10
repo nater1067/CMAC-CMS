@@ -1,2 +1,6 @@
 cmf_create:
     resource: "@CmfCreateBundle/Resources/config/routing/rest.xml"
+
+_demo:
+    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+    prefix: /demo
