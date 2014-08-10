@@ -9,8 +9,11 @@
         color:#fff;
     }
 .page__nav{
-    margin-top:40px;
+    margin-top:10px;
 }
 .navbar--external{
     font-size:.9em;
+}
+.centered {
+    text-align:center;
 }

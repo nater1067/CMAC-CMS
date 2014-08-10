@@ -27,5 +27,19 @@ class LoadSimpleCms implements FixtureInterface
 
         $dm->persist($page);
         $dm->flush();
+
+
+
+        $parent = $dm->find(null, '/cms/simple');
+        $page = new Page();
+        $page->setTitle('Affiliate Organizations');
+        $page->setLabel('Organizations');
+        $page->setBody('Affiliate Organizations');
+
+        // the tree position defines the URL
+        $page->setPosition($parent, 'organizations');
+
+        $dm->persist($page);
+        $dm->flush();
     }
 }
