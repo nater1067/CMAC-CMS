@@ -18,9 +18,13 @@ class LoadSimpleCms implements FixtureInterface
     {
         $parent = $dm->find(null, '/cms/simple');
         $page = new Page();
-        $page->setTitle('About Symfony CMF');
+        $page->setTitle('About CMAC');
         $page->setLabel('About');
-        $page->setBody('Here is the about body');
+        $page->setBody('<h2>Mission Statement</h2>
+    <p>To be the unifying voice for children with medical needs throughout Nevada</p>
+    <h2>Our Vision Statement</h2>
+    <p>To provide advocacy, resources and support for community agencies who serve Nevada’s medically fragile children</p>
+    ');
 
         // the tree position defines the URL
         $page->setPosition($parent, 'about');
@@ -35,7 +39,7 @@ class LoadSimpleCms implements FixtureInterface
         $page->setTitle('Affiliate Organizations');
         $page->setLabel('Organizations');
         $page->setBody('Affiliate Organizations');
-        $page->setDefault('_template', 'AcmeDemoBundle::home.html.twig');
+        $page->setDefault('_template', 'AcmeDemoBundle:Organizations:orgs.html.twig');
 
         // the tree position defines the URL
         $page->setPosition($parent, 'organizations');

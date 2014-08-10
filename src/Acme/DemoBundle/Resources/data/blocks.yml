@@ -15,8 +15,8 @@ Acme\DemoBundle\Document\UnitBlock:
         route: _configurator_home
         image: bundles/acmedemo/images/welcome-configure.gif
 
-    demo:
-        id: /cms/content/blocks/hero_unit/demo
-        text: View the demo
-        route: /cms/simple/demo
-        image: bundles/acmedemo/images/welcome-demo.gif
+#    demo:
+#        id: /cms/content/blocks/hero_unit/demo
+#        text: View the demo
+#        route: /cms/simple/demo
+#        image: bundles/acmedemo/images/welcome-demo.gif
