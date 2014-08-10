@@ -1,8 +1,10 @@
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
 {% block main %}
-<h1>Past Speakers</h1>
-<div class="past-events">
 
+    {% createphp cmfMainContent as="rdf" %}
+
+    {{ rdf|raw }}
+<div class="past-events">
     <div>
         July 9, 2014 - <b>“Successful Advocating Processes and Nevada Legislative Issues”</b><br />
         Denise Tanata Ashby, Executive Director of Children’s Advocacy Alliance
@@ -60,5 +62,5 @@
         Dr. Andy Eisen, Associate Dean for Clinical Education at Touro University
     </div>
 </div>
-
+    {% endcreatephp %}
 {% endblock %}
