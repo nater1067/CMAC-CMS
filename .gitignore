@@ -11,3 +11,4 @@
 /composer.phar
 *.sqlite
 .idea
+app/app.sqlite
