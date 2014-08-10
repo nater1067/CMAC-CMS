@@ -15,7 +15,7 @@ role :app,        domain, :primary => true       # This may be the same as your 
 set :user,                  "root"  # The server's user for deploys
 
 set  :keep_releases,  3
-`
+
 set :use_composer, true
 set :copy_vendors, true
 
