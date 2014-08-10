@@ -17,3 +17,7 @@
 .centered {
     text-align:center;
 }
+
+.past-events div {
+    margin-bottom: 15px;
+}

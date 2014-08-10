@@ -35,9 +35,24 @@ class LoadSimpleCms implements FixtureInterface
         $page->setTitle('Affiliate Organizations');
         $page->setLabel('Organizations');
         $page->setBody('Affiliate Organizations');
+        $page->setDefault('_template', 'AcmeDemoBundle::home.html.twig');
 
         // the tree position defines the URL
         $page->setPosition($parent, 'organizations');
+
+        $dm->persist($page);
+        $dm->flush();
+
+
+        $parent = $dm->find(null, '/cms/simple');
+        $page = new Page();
+        $page->setTitle('Past Speakers');
+        $page->setLabel('Past Speakers');
+        $page->setBody('Past Speakers');
+        $page->setDefault('_template', 'AcmeDemoBundle:PastSpeakers:past-speakers.html.twig');
+
+        // the tree position defines the URL
+        $page->setPosition($parent, 'speakers');
 
         $dm->persist($page);
         $dm->flush();

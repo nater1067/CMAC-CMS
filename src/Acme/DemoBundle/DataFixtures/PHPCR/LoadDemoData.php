@@ -35,6 +35,22 @@ class LoadDemoData implements FixtureInterface
 
         $manager->persist($homeMenuNode);
 
+
+        // tweak join us page
+        $page = $manager->find(null, '/cms/simple');
+        $page->setBody('Hello');
+        $page->setDefault('_template', 'AcmeDemoBundle::home.html.twig');
+
+        // add menu item for home
+        $menuRoot = $manager->find(null, '/cms/simple');
+        $homeMenuNode = new MenuNode('home');
+        $homeMenuNode->setLabel('Home');
+        $homeMenuNode->setParent($menuRoot);
+        $homeMenuNode->setContent($page);
+
+        $manager->persist($homeMenuNode);
+
+
         // load the pages
         Fixtures::load(array(__DIR__.'/../../Resources/data/pages.yml'), $manager);
 
